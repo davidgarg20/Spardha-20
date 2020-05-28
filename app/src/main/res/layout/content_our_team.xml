@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.iitbhu.spardha2019.activity.ourTeam"
+    tools:showIn="@layout/activity_our_team">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:id="@+id/recycler_view_team_cat_scroll"
+        android:nestedScrollingEnabled="true"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view_team_con"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:nestedScrollingEnabled="false"
+        android:background="@drawable/images"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view_team_cat"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/recycler_view_team_con"
+        android:background="@drawable/images"
+        android:nestedScrollingEnabled="false"
+        />
+        </RelativeLayout>
+    </ScrollView>
+    <android.support.v7.widget.RecyclerView
+        app:layout_constraintTop_toBottomOf="@+id/recycler_view_team_cat_scroll"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/recycler_view_team"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="@drawable/images"
+        android:scrollbars="vertical" />
+
+
+</android.support.constraint.ConstraintLayout>

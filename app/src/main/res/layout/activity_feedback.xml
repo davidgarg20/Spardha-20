@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.FeedbackActivity">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@drawable/images"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:orientation="horizontal"
+            android:layout_alignParentTop="false"
+            android:id="@+id/llfb"
+            android:gravity="center_vertical"
+            android:background="@color/navigationBarColor"
+            >
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_height="35dp"
+                android:layout_width="35dp"
+                android:layout_marginHorizontal="10dp"
+                android:id="@+id/llback"
+                android:background="@drawable/back_arrow"/>
+
+            <TextView
+                android:layout_height="55dp"
+                android:layout_width="match_parent"
+                android:gravity="center_vertical"
+                android:text="Feedback"
+                android:textSize="28dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                >
+            </TextView>
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_height="match_parent"
+            android:layout_below="@+id/llfb"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:id="@+id/radiogroup"
+                android:layout_marginBottom="20dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:buttonTint="@android:color/white"
+                    android:textSize="20dp"
+                    android:text="Hospitality"
+                    />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:buttonTint="@android:color/white"
+                    android:textSize="20dp"
+                    android:layout_height="wrap_content"
+                    android:text="Events and Fixture"
+                    />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:checked="true"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:buttonTint="@android:color/white"
+                    android:layout_height="wrap_content"
+                    android:text="Others"
+                    />
+
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:weightSum="10"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+            <EditText
+                android:layout_width="0dp"
+                android:gravity="start"
+                android:hint="Please enter your feedback here..."
+                android:id="@+id/edtfb"
+                android:layout_weight="8"
+                style="@style/MyEditTextStyle"
+                android:layout_height="200dp"
+
+                />
+            </LinearLayout>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/buttonstyle3"
+                android:padding="5dp"
+                android:id="@+id/btnsubmit"
+                android:text="Submit"
+                android:textStyle="bold"
+                android:textColor="#fff" />
+
+        </LinearLayout>
+
+        </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
